@@ -1,6 +1,7 @@
 package controller;
 
 import model.Notebook;
+import model.services.NotUniqueNicknameException;
 import view.View;
 
 import java.util.Scanner;
@@ -18,6 +19,15 @@ public class Controller {
         Scanner sc = new Scanner(System.in);
         InputData in = new InputData(sc,view);
         in.createData();
-        notebook.setNewNote(in.createNote());
+
+        while(true) {
+            try {
+                notebook.setNewNote(in.createNote());
+                break;
+            } catch (NotUniqueNicknameException e) {
+                view.printMessage(e.getMessage());
+            }
+        }
+
     }
 }

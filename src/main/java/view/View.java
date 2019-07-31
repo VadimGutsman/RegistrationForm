@@ -3,16 +3,12 @@ package view;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import static view.Messages.INPUT_STRING_DATA;
-import static view.Messages.WRONG_INPUT_DATA;
+import static view.Messages.*;
 
 public class View {
-    static String MESSAGES_BUNDLE_NAME = "messages";
     public static final ResourceBundle bundle =
             ResourceBundle.getBundle(
-                    MESSAGES_BUNDLE_NAME,
-                    new Locale("en"));
-//                    new Locale("ua", "UA"));  // Ukrainian
+                    MESSAGES_BUNDLE_NAME, new Locale(LOCALE_ENG));
 
     public void printStringInput(String message) {
         printMessage(concatString(

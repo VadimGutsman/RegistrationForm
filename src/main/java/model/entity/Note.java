@@ -1,4 +1,6 @@
-package model;
+package model.entity;
+
+import model.services.Group;
 
 public class Note {
     private String name;

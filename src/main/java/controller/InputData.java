@@ -1,7 +1,7 @@
 package controller;
 
-import model.Address;
-import model.Note;
+import model.entity.Address;
+import model.entity.Note;
 import view.Messages;
 import view.View;
 
